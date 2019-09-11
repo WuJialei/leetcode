@@ -8,6 +8,37 @@
  */
 class Solution {
     public boolean isPalindrome(ListNode head) {
+        
+        if (head == null || head.next == null) {
+            return true;
+        }
+        ListNode slow = head;
+        ListNode fast = head.next;
+        ListNode cur = null, pre = null;
+        while(fast != null && fast.next != null) {
+            cur = slow;
+            slow = slow.next;
+            fast = fast.next.next;
+            cur.next = pre;
+            pre = cur; 
+        }
+        ListNode p2 = slow.next;
+        //ListNode tmp = slow;
+        slow.next = pre;
+        pre = slow;
+        ListNode p1 = fast == null ? pre.next : pre;
+        
+        while(p2 != null) {
+            if(p2.val != p1.val) {
+                return false;
+            }
+            p2 = p2.next;
+            p1 = p1.next;
+        }
+        return true;
+        
+    }
+        /*
     	if (head == null || head.next == null) {
     		return true;
     	}
@@ -63,6 +94,6 @@ class Solution {
     		node2 = node2.next;
     	}
     	return true;
-    }
+    }*/
 
 }
