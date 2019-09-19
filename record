@@ -5,9 +5,12 @@
 4.链表-328. Odd Even Linked List
 
 堆
-5.优先级队列-215. Kth Largest Element in an Array
-6.堆(优先级队列)-295. Find Median from Data Stream
-7.堆(优先级队列)-347. Top K Frequent Elements
+1.优先级队列-215. Kth Largest Element in an Array
+2.堆(优先级队列)-295. Find Median from Data Stream
+3.堆(优先级队列)-347. Top K Frequent Elements
 
 二分
-7.二分算法-378. Kth Smallest Element in a Sorted Matrix
+1.二分算法-378. Kth Smallest Element in a Sorted Matrix
+
+栈
+1.四则运算-227. Basic Calculator II
