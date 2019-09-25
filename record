@@ -18,3 +18,7 @@
 
 哈希
 1.HashMap-380. Insert Delete GetRandom O(1)
+
+树
+1.中序遍历-297. Serialize and Deserialize Binary Tree
+2.递归-236. Lowest Common Ancestor of a Binary Tree 
