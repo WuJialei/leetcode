@@ -20,6 +20,7 @@
 
 哈希
 1.HashMap-380. Insert Delete GetRandom O(1)
+2.HashSet-128. Longest Consecutive Sequence
 
 树
 1.中序遍历-297. Serialize and Deserialize Binary Tree
