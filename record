@@ -14,6 +14,7 @@
 1.二分算法-378. Kth Smallest Element in a Sorted Matrix
 2.二分-162. Find Peak Element
 3.二分-287. Find the Duplicate Number(链表环？)
+4.二分+贪心-300. Longest Increasing Subsequence
 
 栈
 1.四则运算-227. Basic Calculator II
@@ -38,6 +39,9 @@
 1.树状数组-315. Count of Smaller Numbers After Self
 1.1.https://zxi.mytechroad.com/blog/algorithms/array/leetcode-315-count-of-smaller-numbers-after-self/
 1.2.https://www.yunaitong.cn/fenwick-tree.html
+
+动态规划
+1.最小平方数和-279. Perfect Squares
 
 未解决
 1.218. The Skyline Problem
