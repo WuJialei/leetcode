@@ -27,7 +27,7 @@ class Solution {
         }
         int len = prerequisites.length;
         for (int i = 0; i < len; ++i) {
-            graph[prerequisites[i][1]].add(prerequisites[i][0]);
+            graph[prerequisites[i][0]].add(prerequisites[i][1]);
         }
         int[] visited = new int[numCourses];
         for (int i = 0; i < numCourses; ++i) {
