@@ -51,6 +51,10 @@
 2.bfs寻找最短路径建模-127. Word Ladder
 3.dfs解决图是否存在环-207. Course Schedule(记录路径：210. Course Schedule II)
 
+递归
+1.阶乘得到的数尾部含0的个数(递归)-172. Factorial Trailing Zeroes
+
+
 位运算
 1.异或(数与本身异或为0，与0异或还是自身)-136. Single Number
 
