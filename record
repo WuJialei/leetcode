@@ -57,6 +57,7 @@
 
 位运算
 1.异或(数与本身异或为0，与0异或还是自身)-136. Single Number
+2.移位运算符-190. Reverse Bits
 
 未解决
 1.218. The Skyline Problem
