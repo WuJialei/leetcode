@@ -59,6 +59,7 @@
 1.异或(数与本身异或为0，与0异或还是自身)-136. Single Number
 2.移位运算符-190. Reverse Bits
 3.比特表优化厄拉多塞筛法计算质数个数-204. Count Primes(https://leetcode-cn.com/problems/count-primes/solution/ji-shu-zhi-shu-bao-li-fa-ji-you-hua-shai-fa-ji-you/)
+4.异或(加上数组下标)-268. Missing Number
 
 未解决
 1.218. The Skyline Problem
