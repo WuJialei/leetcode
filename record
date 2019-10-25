@@ -28,7 +28,7 @@
 1.中序遍历-297. Serialize and Deserialize Binary Tree
 2.递归-236. Lowest Common Ancestor of a Binary Tree 
 3.递归求最大路径和-124. Binary Tree Maximum Path Sum
-4.dfs递归+回溯找字符串中的所有回文串组合-131. Palindrome Partitioning
+
 
 字符串
 1.字符串的比较-179. Largest Number
@@ -46,11 +46,14 @@
 动态规划
 1.最小平方数和-279. Perfect Squares
 2.斐波那契变体-322. Coin Change
+3.分割字符串-139. Word Break
 
 搜索
 1.优化dfs节省空间-329. Longest Increasing Path in a Matrix
 2.bfs寻找最短路径建模-127. Word Ladder
 3.dfs解决图是否存在环-207. Course Schedule(记录路径：210. Course Schedule II)
+4.dfs+回溯+剪枝-139. Word Break
+5.dfs递归+回溯找字符串中的所有回文串组合-131. Palindrome Partitioning
 
 递归
 1.阶乘得到的数尾部含0的个数(递归)-172. Factorial Trailing Zeroes
