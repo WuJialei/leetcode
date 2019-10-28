@@ -1,4 +1,5 @@
-class Trie {
+
+/*class Trie {
 
     private class Node {
         Node[] childs = new Node[26];
@@ -7,12 +8,12 @@ class Trie {
 
     private Node root = new Node();
 
-    /** Initialize your data structure here. */
+    
     public Trie() {
         
     }
     
-    /** Inserts a word into the trie. */
+    
     public void insert(String word) {
         insert(word, root);
     }
@@ -33,7 +34,7 @@ class Trie {
         
     }
     
-    /** Returns if the word is in the trie. */
+    
     public boolean search(String word) {
         return search(word, root);
     }
@@ -55,7 +56,8 @@ class Trie {
         }
     }
     
-    /** Returns if there is any word in the trie that starts with the given prefix. */
+    
+    
     public boolean startsWith(String prefix) {
         return startsWith(prefix, root);
     }
@@ -75,7 +77,7 @@ class Trie {
         }
     }
 }
-
+*/
 /**
  * Your Trie object will be instantiated and called as such:
  * Trie obj = new Trie();
@@ -83,3 +85,78 @@ class Trie {
  * boolean param_2 = obj.search(word);
  * boolean param_3 = obj.startsWith(prefix);
  */
+class Trie {
+
+
+    private class Node {
+        Node[] nodes = new Node[26];
+        boolean isEnd;
+    }
+
+    private Node root = new Node();
+
+    /** Initialize your data structure here. */
+    public Trie() {
+    }
+    
+    /** Inserts a word into the trie. */
+    public void insert(String word) {
+        insert(word, root);
+    }
+
+    public void insert(String word, Node node) {
+        if (word == null || word.length() == 0) {
+            return;
+        }
+        int index = word.charAt(0) - 'a';
+        if (node.nodes[index] == null) {
+            node.nodes[index] = new Node();
+        }
+        if (word.length() == 1) {
+            node.nodes[index].isEnd = true;
+        } else {
+            insert(word.substring(1), node.nodes[index]);
+        }
+    }
+    
+    /** Returns if the word is in the trie. */
+    public boolean search(String word) {
+        return search(word, root);
+    }
+
+    public boolean search(String word, Node node) {
+        if (word == null || word.length() == 0) {
+            return true;
+        }
+        int index = word.charAt(0) - 'a';
+        if (node.nodes[index] == null) {
+            return false;
+        }
+        if (word.length() == 1) {
+            return node.nodes[index].isEnd ? true : false;
+        } else {
+            return search(word.substring(1), node.nodes[index]);
+        }
+    }
+    
+    /** Returns if there is any word in the trie that starts with the given prefix. */
+    public boolean startsWith(String prefix) {
+        return startsWith(prefix, root);
+    }
+
+    public boolean startsWith(String word, Node node) {
+        if (word == null || word.length() == 0){
+            return true;
+        }
+        int index = word.charAt(0) - 'a';
+        if (node.nodes[index] == null) {
+            return false;
+        } else {
+            if (word.length() == 1) {
+                return true;
+            } else {
+                return startsWith(word.substring(1), node.nodes[index]);
+            }
+        }
+    }
+}
