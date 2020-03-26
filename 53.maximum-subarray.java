@@ -6,10 +6,15 @@
 
 // @lc code=start
 class Solution {
+
+    int[] arrays;
+
     public int maxSubArray(int[] nums) {
         if (nums == null || nums.length == 0) {
             return 0;
         }
+        arrays = nums;
+        /*
         int a = nums[0];
         int b = 0;
         int ans = a;
@@ -21,7 +26,44 @@ class Solution {
             a = b;
         }
         return ans;
+        */
+        return maxSubA(0, nums.length-1);
+
     }
+
+    public int maxSubA(int left, int right) {
+        if (left == right) {
+            return arrays[left];
+        }
+        if (left > right) {
+            return 0;
+        }
+        int mid = left + (right-left)/2;
+        // 分治，左最大，右最大，含左右中间向两边扩散的最大
+        return Math.max(Math.max(maxSubA(left, mid), maxSubA(mid+1, right)), maxSubM(left, mid, right));
+    }
+
+    public int maxSubM(int left, int mid, int right) {
+        int leftSum = Integer.MIN_VALUE;
+        int rightSum = Integer.MIN_VALUE;
+        int l = mid;
+        int temp = 0;
+        while (l >= left) {
+            temp += arrays[l];
+            leftSum = Math.max(leftSum, temp);
+            --l;
+        }
+        temp = 0;
+        int r = mid + 1;
+        while (r <= right) {
+            temp += arrays[r];
+            rightSum = Math.max(rightSum, temp);
+            ++r;
+        }
+        return leftSum + rightSum;
+    }
+
+
 }
 // @lc code=end
 
