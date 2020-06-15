@@ -19,6 +19,31 @@ import java.util.List;
  * };
  */
 
+/*
+class Solution {
+    public List<List<Integer>> findSolution(CustomFunction customfunction, int z) {
+        List<List<Integer>> ans = new ArrayList<>();
+        int x = 1;
+        int y = 1000;
+        while (x <= 1000 && y >= 1) {
+            int cur = customfunction.f(x, y);
+            if (cur == z) {
+                List<Integer> list = new ArrayList<>();
+                list.add(x);
+                list.add(y);
+                ans.add(list);
+                ++x;
+                --y;
+            } else if (cur < z) {
+                ++x;
+            } else {
+                --y;
+            }
+        }
+        return ans;
+    }
+}
+*/
 class Solution {
     public List<List<Integer>> findSolution(CustomFunction customfunction, int z) {
         List<List<Integer>> ans = new ArrayList<>();
